@@ -87,16 +87,16 @@ public class HibernateUtil {
 //        Session session = util.getSessionFactory().openSession();
 //        Transaction transaction = session.beginTransaction();
 //        Person p = new Person();
-//        p.setAddressList(Arrays.asList("address1", "address2"));
+//        p.setAddressList(Arrays.asList("addressA", "addressB"));
 //        session.persist(p);
 //        transaction.commit();
 //        session.close();
 
 
 
-//        Session session = util.getSessionFactory().openSession();
-//        List<Person> persons = session.createQuery("from Person", Person.class).list();
-//        System.out.println("persons = " + persons);
-//        session.close();
+        Session session = util.getSessionFactory().openSession();
+        List<Person> persons = session.createQuery("from Person", Person.class).list();
+        System.out.println("persons = " + persons);
+        session.close();
     }
 }
