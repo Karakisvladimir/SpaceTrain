@@ -7,6 +7,7 @@ import jakarta.persistence.Converter;
 import java.util.List;
 
 @Converter
+@SuppressWarnings("unchecked")
 public class AddressConverter implements AttributeConverter<List<String>, String> {
 
         public AddressConverter () {
